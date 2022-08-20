@@ -4,14 +4,14 @@ namespace tabuleiro
 {
     internal class Peca
     {
-        public Posicao Cosicao { get; set; }
+        public Posicao Posicao { get; set; }
         public Cor Cor { get; protected set; }
         public int QteMovimentos { get; protected set; }
         public Tabuleiro Tab { get; protected set; }
 
-        public Peca(Posicao cosicao, Cor cor, Tabuleiro tab)
+        public Peca(Posicao posicao, Cor cor, Tabuleiro tab)
         {
-            Cosicao = cosicao;
+            Posicao = posicao;
             Cor = cor;
             Tab = tab;
             QteMovimentos = 0;
