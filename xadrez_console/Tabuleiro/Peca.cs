@@ -2,7 +2,7 @@
 
 namespace tabuleiro
 {
-    internal class Peca
+    internal class Peca //Superclasse genérica
     {
         public Posicao Posicao { get; set; }
         public Cor Cor { get; protected set; }
