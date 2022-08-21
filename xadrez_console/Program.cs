@@ -8,22 +8,10 @@ namespace xadrez_console
     {
         static void Main(string[] args)
         {
-            try
-            {
+            PosicaoXadrez pos = new PosicaoXadrez('c', 7);
 
-                Tabuleiro tab = new Tabuleiro(8, 8);
-                tab.ColocarPeca(new Torre(tab, Cor.Preta), new Posicao(0, 0));
-                tab.ColocarPeca(new Torre(tab, Cor.Preta), new Posicao(1, 9));
-                tab.ColocarPeca(new Rei(tab, Cor.Preta), new Posicao(0, 2));
-
-
-                Tela.ImpimirTabuleiro(tab);
-                Console.WriteLine();
-            }
-            catch (TabuleiroException e)
-            {
-                Console.WriteLine(e.Message);
-            }
+            Console.WriteLine(pos.ToPosicao());
+            Console.WriteLine(pos);
         }
     }
 }

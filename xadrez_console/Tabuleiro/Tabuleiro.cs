@@ -16,17 +16,17 @@ namespace tabuleiro
             Pecas = new Peca[linha, colunas];
         }
 
-        public Peca Peca(int linha, int coluna) //obter uma peça.
+        public Peca Peca(int linha, int coluna)
         {
             return Pecas[linha, coluna];
         }
 
-        public Peca Peca(Posicao pos) //obter uma peça.
+        public Peca Peca(Posicao pos)
         {
             return Pecas[pos.Linha, pos.Coluna];
         }
 
-        public void ColocarPeca(Peca p, Posicao pos) //Pega uma peça obtida, e aplica em uma posição.
+        public void ColocarPeca(Peca p, Posicao pos)
         {
             if (ExistePeca(pos))
             {
@@ -36,7 +36,7 @@ namespace tabuleiro
             p.Posicao = pos;
         }
 
-        public bool PosicaoValida(Posicao pos) //verifica se a posição onde estamos tentando inserir uma peça não excede os limites de uma matriz.
+        public bool PosicaoValida(Posicao pos)
         {
             if (pos.Linha < 0 || pos.Linha >= Linhas || pos.Coluna < 0 || pos.Coluna >= Colunas)
             {
@@ -45,14 +45,14 @@ namespace tabuleiro
             return true;
         }
 
-        public void ValidarPosicao(Posicao pos) //Se o local onde estamos tentando inserir uma peça exceder os limites da matriz, o programa lança uma exceção.
+        public void ValidarPosicao(Posicao pos) 
         {
-            if (PosicaoValida(pos) == false) // possível correção de !
+            if (PosicaoValida(pos) == false)
             {
                 throw new TabuleiroException("Posição inválida");
             }
         }
-        public bool ExistePeca(Posicao pos) //Método que verifica se existe uma peça em determinada posição.
+        public bool ExistePeca(Posicao pos) 
         {
             ValidarPosicao(pos);
             return Peca(pos) != null;
