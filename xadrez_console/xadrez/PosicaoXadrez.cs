@@ -19,6 +19,7 @@ namespace xadrez
         {
             return new Posicao(8 - Linha, Coluna - 'a');
         }
+
         public override string ToString()
         {
             return "" + Coluna + Linha;
