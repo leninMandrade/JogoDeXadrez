@@ -2,7 +2,7 @@
 
 namespace tabuleiro
 {
-    internal class Peca //Superclasse genérica
+    abstract class Peca //Superclasse genérica
     {
         public Posicao Posicao { get; set; }
         public Cor Cor { get; protected set; }
@@ -16,10 +16,12 @@ namespace tabuleiro
             Cor = cor;
             QteMovimentos = 0;
         }
-
-        public void IncrementarQtdeMovimentos()
+        
+        public void IncrementarQteMovimentos()
         {
             QteMovimentos++;
         }
+        
+        public abstract bool[,] MovimentosPossiveis();
     }
 }
