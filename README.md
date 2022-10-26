@@ -1,0 +1,2 @@
+# Jogo de Xadrez
+Repositório criado para demonstrar o projeto de um jogo de Xadrez desenvolvido para o console do Visual Studio Community durante o curso de linguagem C#, ministrado pelo professor Nélio Alves.
